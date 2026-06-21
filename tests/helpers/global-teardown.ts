@@ -9,7 +9,7 @@ export default function globalTeardown(config: FullConfig) {
   if (process.env.RUNNER?.toUpperCase() === "LOCAL") {
     console.log(" >> Local run detected - starting Allure server...");
 
-    exec("allure serve", { shell: "cmd.exe" }, (error) => {
+    exec("allure serve", (error) => {
       if (error) {
         console.error("ERROR: Starting Allure server:", error.message);
       }

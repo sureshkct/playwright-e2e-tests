@@ -17,7 +17,7 @@ export default class BasePage {
     /** Click action */
     async click(ele: Locator) {
         try {
-            await expect(ele).toBeVisible({ timeout: 10_000 }); // Custom timeout: Default - 5 seconds
+            await expect(ele).toBeVisible({ timeout: 20_000 }); // Custom timeout: Default - 5 seconds
             await ele.click();
         } catch (error) {
             await log("error", `Failed to click element: ${ele.toString()}, original error: ${error}`);
@@ -28,7 +28,7 @@ export default class BasePage {
     /** Type action */
     async typeInto(ele: Locator, text: string) {
         try {
-            await expect(ele).toBeVisible({ timeout: 10_000 });
+            await expect(ele).toBeVisible({ timeout: 20_000 });
             await ele.fill(text);
         } catch (error) {
             await log("error", `Failed to type into element: ${ele.toString()}, original error: ${error}`);

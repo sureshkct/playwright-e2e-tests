@@ -46,7 +46,7 @@ test.describe("E2E Customer Search", () => {
             if (customerNotFound) {
                 await log("warn", `The giver user: ${user.first_name} ${user.last_name} could not found in the portal`);
             } else {
-                await log("info", `The giver user: ${user.first_name} ${user.first_name} found in the portal`);
+                await log("info", `The giver user: ${user.first_name} ${user.last_name} found in the portal`);
             }
         }
     });
